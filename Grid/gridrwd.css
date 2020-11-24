@@ -1,0 +1,100 @@
+*, *:before, *:after {
+  box-sizing: border-box; 
+}
+.wrapper{
+	display: grid;
+	height:100vh;
+	grid-template-columns: 1fr;
+	grid-template-rows: 0.4fr 0.2fr 6fr 0.4fr;
+	grid-template-areas: 
+	"haus"
+	"listi"
+	"megin"
+	"fotur";
+}
+header{ grid-area: haus; border: 1px dotted red;}
+nav{grid-area: listi;border: 1px dotted red; }
+main{grid-area: megin;border: 1px dotted red;}
+footer{grid-area: fotur;border: 1px dotted red; }
+img {
+  max-width: 100%;
+  height: auto;
+}
+.litlarmyndir {
+  margin:0;
+}
+.litlarmyndir img {
+  display: block;
+  border: 1px solid orangered;
+}
+
+.myndabox {
+    display: grid;
+    grid-template-columns: 162px 162px;
+  }
+/*  ========================================
+Viðmið - breakpoints 37.5em = 600px + 
+========================================*/
+
+@media screen and (min-width: 37.5em) {
+  main {
+  	display: grid;
+    grid-template-columns: 1fr 2fr;  /* skipti yfir í 2 dálka */
+    grid-template-areas:
+      "vinstri midja"
+      "haegri  midja";
+  }
+  .midja{grid-area: midja;border: 1px dotted red;}
+  aside{grid-area: vinstri;border: 1px dotted red;}
+  article{grid-area: haegri;border: 1px dotted red;}
+}
+/* ========================================
+Viðmið - breakpoints 48em = 760px +
+======================================== */
+
+@media screen and (min-width: 48em) {  
+  body {
+    grid-template-areas:
+      "listi"      /*færi topnav efst á síðu*/
+      "haus"
+      "main"
+      "fotur";
+  }
+
+
+/* ========================================
+Viðmið - breakpoints 60em = 960px +
+======================================== */
+
+@media screen and (min-width: 60em) { 
+  body { 
+    max-width: 60em; 
+    margin: 0 auto;
+  }
+  main {
+    /* skipti yfir í 3 dálka */
+    grid-template-areas:
+      "vinstri midja haegri";
+
+    grid-template-columns: 1fr 3fr 1fr;
+  }
+  .topmenu {
+    justify-content: space-around;
+  }
+  .myndabox {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+  }
+  
+}
+/* ========================================
+Viðmið - breakpoints 80em = 1280px +
+======================================== */
+
+@media screen and (min-width: 80em) { 
+  body { 
+    max-width: 80em;
+    margin: 0 auto;
+  }
+   
+}

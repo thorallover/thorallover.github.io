@@ -1,0 +1,45 @@
+/*minnsta stærð fyrst*/
+.wrapper{
+    display: grid;
+	height:100vh;
+	grid-template-columns: 1fr;
+	grid-template-rows: 0.4fr 0.2fr 2fr 2fr 2fr 0.4fr;
+	grid-template-areas: 
+	
+	"haus"
+	"megin"
+	"vinstri"
+	"haegri"
+	"listi"
+	"fotur";
+	
+}
+header{ grid-area: haus; border: 1px dotted red;}
+nav{grid-area: listi;border: 1px dotted red; }
+main{grid-area: megin;border: 1px dotted red;}
+aside{grid-area: vinstri;border: 1px dotted red;}
+article{grid-area: haegri;border: 1px dotted red;}
+footer{grid-area: fotur;border: 1px dotted red; }
+
+
+
+
+
+@media screen and (min-width: 600px)
+{
+.wrapper{
+	
+	grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+	grid-template-rows: 1fr 0.8fr 3fr 1fr;
+	grid-template-areas: 
+	
+	"haus haus haus haus haus"
+	"listi listi listi listi listi"
+	"vinstri megin megin megin haegri"
+	"fotur fotur fotur fotur fotur";
+	
+}
+header{ grid-area: haus; border: 1px dotted blue;}
+}
+
+
