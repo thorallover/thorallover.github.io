@@ -1,2 +1,2 @@
-# Þórarinn
-## Þetta er fyrsta vefsíðan mín
+# Verkefni 7
+## Lokaverkefni haust 2022 
